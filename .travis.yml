@@ -2,7 +2,7 @@
 
 #STEP: 2
 language: android
-jdk: oraclejdk8
+jdk: oraclejdk7
 sudo: false
 
 notifications:  #Optional
