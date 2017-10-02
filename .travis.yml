@@ -1,6 +1,7 @@
 language: android
+os: linux
 jdk: oraclejdk8
-sudo: required
+sudo: false
 
 notifications:  #Optional
   email:
@@ -9,8 +10,6 @@ notifications:  #Optional
 env:
   matrix:
     - ANDROID_TARGET=android-16 ANDROID_ABI=armeabi-v7a
-    - ANDROID_TARGET=android-19 ANDROID_ABI=armeabi-v7a
-    - ANDROID_TARGET=android-23 ANDROID_ABI=armeabi-v7a
   global:   #Optional
     - ADB_INSTALL_TIMEOUT=10    #Time out to 10 mins
 
@@ -20,7 +19,7 @@ android:
     - platform-tools
     - tools
     - build-tools-25.0.0    #Build tool version
-    - android-25            #targate api version
+    - android-23            #targate api version
 
     # Additional components
     - extra-google-google_play_services
@@ -29,8 +28,6 @@ android:
 
     #system images for emulator
     - sys-img-armeabi-v7a-android-16
-    - sys-img-armeabi-v7a-android-19
-    - sys-img-armeabi-v7a-android-23
 
   licenses:
     - 'android-sdk-preview-license-.+'
