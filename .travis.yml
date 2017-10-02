@@ -41,13 +41,15 @@ android:
 #STEP: 5
 before_install:
   - chmod +x gradlew
-before_cache:
-  - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
 
-cache:
-  directories:      #Cache all dirs under .gradle folder
-    - $HOME/.gradle/daemon      #Cache daemon logs
-    - $HOME/.gradle/native      #Cache library downloaded from the gradle dependency
-    - $HOME/.gradle/wrapper     #Cache the gradle
+
+#before_cache:
+#  - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
+#
+#cache:
+#  directories:      #Cache all dirs under .gradle folder
+#    - $HOME/.gradle/daemon      #Cache daemon logs
+#    - $HOME/.gradle/native      #Cache library downloaded from the gradle dependency
+#    - $HOME/.gradle/wrapper     #Cache the gradle
 
 #STEP: 6
