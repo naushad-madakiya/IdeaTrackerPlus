@@ -6,8 +6,8 @@ jdk: oraclejdk8
 sudo: false
 
 notifications:  #Optional
-    email:
-        - naushad.madakiya@gmail.com #Add your email address
+  email:
+    - naushad.madakiya@gmail.com #Add your email address
 
 #STEP: 3
 env:
@@ -21,26 +21,28 @@ env:
 
 #STEP: 4
 android:
-    update_sdk: true  #Check for the updates each time you run the build.
-    components:
-        - platform-tools
-        - tools
-        - build-tools-25.0.0    #Build tool version
-        - android-25            #targate api version
+  update_sdk: true  #Check for the updates each time you run the build.
+  components:
+    - platform-tools
+    - tools
+    - build-tools-25.0.0    #Build tool version
+    - android-25            #targate api version
 
-        # Additional components
-        - extra-google-google_play_services
-        - extra-google-m2repository
-        - extra-android-m2repository
+    # Additional components
+    - extra-google-google_play_services
+    - extra-google-m2repository
+    - extra-android-m2repository
 
-        #system images for emulator
-        - sys-img-armeabi-v7a-android-16
-        - sys-img-armeabi-v7a-android-19
-        - sys-img-armeabi-v7a-android-21
+    #system images for emulator
+    - sys-img-armeabi-v7a-android-16
+    - sys-img-armeabi-v7a-android-19
+    - sys-img-armeabi-v7a-android-21
 
 #STEP: 5
+before_install:
+  - chmod +x gradlew
 before_cache:
-    - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
+  - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
 
 cache:
   directories:      #Cache all dirs under .gradle folder
