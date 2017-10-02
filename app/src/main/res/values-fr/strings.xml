@@ -75,6 +75,7 @@
     <string name="welcome_content">Toutes vos idées et tâches\nréunies en une seule app</string>
     <string name="edit">MODIFIER</string>
 
+    <string name="idea_menu_pref">firstIdeaMenu</string>
     <string-array name="array_from">
         <item>Terminé</item>
         <item>Plus tard</item>
